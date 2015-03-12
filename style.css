@@ -1,0 +1,83 @@
+.quarter {
+    display:   inline-block;
+    min-width: 25%;
+}
+
+h1{color: red}
+h2{color: blue}
+h3{color: green}
+h4{color: #42188b;
+    font-weight: bold;}
+
+/*check or uncheck*/
+.check, .uncheck {
+    background: url("../images/tick-cross.png");
+    display: block;
+    float:right;
+    height: 25px;
+    width: 25px;}
+
+.false {
+    background-position: 0 -25px;}
+
+input[type="checkbox"]{
+
+}
+
+.checkbox{
+
+}
+
+.buttonkey {
+    margin-bottom: 15px;
+    margin-left: 10px;
+}
+
+.line{
+    height: 12px;
+    border: 0;
+    box-shadow: inset 0 12px 12px -12px rgba(0,0,0,0.5);
+}
+
+.favorite {
+    background-image: url('../images/icon-heart.png');
+    background-position: right, center;
+    background-repeat: no-repeat;}
+
+
+#fixedtop{
+    /*top:0;*/
+    /*position: fixed;*/
+    /*background-color: #5bc0de;*/
+    width: 100%;
+    padding-bottom: 20px;}
+form {
+    margin: auto;
+    /*border:  solid black;*/
+    padding: 15px;
+    border-radius: 10px;
+
+    -moz-box-shadow: 1px 0px 5px #424242;
+    -webkit-box-shadow: 1px 0px 5px #424242;
+    box-shadow: 1px 0px 5px #424242;
+}
+input[type="text"], input[name="image"], input[type="url"]{
+    width: 450px;
+}
+.allbuttons{float: right}
+
+.review-block{margin-left: 15px;}
+
+.star{
+    background-image: url("http://fifthgroup.com/wp-content/uploads/2014/06/five-stars.png");
+    background-repeat: no-repeat;
+    background-position: right top;
+    width: 400px;
+    height: 100px;
+}
+
+.1s {background-position: -25px 0}
+.2s {background-position: -50px 0}
+.3s {background-position: -75px 0}
+.4s {background-position: -100px 0}
+.5s {background-position: -125px 0}

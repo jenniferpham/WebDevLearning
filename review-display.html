@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html ng-app="devResources" ng-controller="MainController as main">
+<head lang="en">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!-- AngularJS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.2/angular.min.js"></script>
+
+    <!-- Firebase -->
+    <script src="https://cdn.firebase.com/js/client/2.0.4/firebase.js"></script>
+    <!-- AngularFire -->
+    <script src="https://cdn.firebase.com/libs/angularfire/0.9.2/angularfire.min.js"></script>
+    <script src="app.js" type="text/javascript"></script>
+    <title>Web Developer Resources</title>
+</head>
+
+<body>
+<button ng-click="testPush()">testPush</button>
+<div class="row">
+    <div class="col-md-12">
+        <div ng-repeat="review in reviewList" >
+            Review Author: {{review.author}}<br>
+            Stars: {{review.stars}}<br>
+            Description: {{review.description}}
+        </div>
+        <form name="reviewForm" ng-submit="addReview()" >
+            <h4>Reviews</h4>
+            <p></p>
+            <div class="review-block">
+                Stars:  <div class="stars"></div> {{review.stars}}
+                {{review.description}}
+                <cite>by: {{review.author}}</cite>
+            </div>
+            <p></p>
+            <label for = "review-stars">Review Stars</label>
+            <select id = "review-stars" ng-model="review.stars">
+                <option value="1" class="1s">1 star</option>
+                <option value="2" class="2s">2 stars</option>
+                <option value="3s">3 stars</option>
+                <option value="4s">4 stars</option>
+                <option value="5s">5 stars</option>
+            </select>
+            <p></p>
+            <label for = "review-description">What did you think about this resource?</label><br>
+            <textarea id = "review-description" ng-model="review.description" rows="4" cols="75"></textarea>
+            <p></p>
+            <label for = "review-author">My name is:</label>
+            <input type="text" ng-model="review.author" value="authorname" id="review-author">
+            <p></p>
+            <input type="submit" class="btn btn-info btn-sm btn-blue" value="Add Review">
+        </form>
+    </div>
+</div>
+
+
+<!--DISPLAY resource database-->
+<h2>List of Student-Added Resources</h2>
+<!--<h4>There are {{filtered.length}} results:</h4>-->
+<div class="displayresources" ng-repeat='link in linkList | filter:search | orderBy:title'>
+    <div class="row">
+        <div class="col-md-6" ng-hide="editting">
+            <h4><a ng-href="{{link.link}}" >{{link.title }} </a></h4><p></p>
+            <strong>Description:</strong> {{link.description}}<br>
+            <strong>URL:  </strong><a ng-href="{{link.link}}">{{link.link}}</a><br>
+
+
+        </div>
+        <div class="col-md-6">
+            <!-- all buttons -->
+            <div class="allbuttons">
+                <!-- Button to go to link -->
+                <a ng-href="{{link.link}}"><button class="btn btn-info btn-sm btn-danger" ng-hide="editting">Go There Now</button></a>
+                <!--  Button to preview -->
+                <button class="btn btn-info btn-sm btn-warning" ng-click="preview=!preview" ng-hide="editting">More Details</button>
+                <!--  buttons show when user sees details but hides when user is editting -->
+                <button ng-click="editting=!editting" class="btn btn-info btn-sm btn-blue" ng-hide="editting">Edit</button>
+
+            </div>
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div ng-show="preview" >
+                <div ng-hide="editting">
+                    <strong>Category:</strong><span >{{link.category}}</span><br>
+                    <strong>Type of Resource:</strong>{{link.resourcetype}}<br>
+                    <strong> Preview: </strong> <br>
+                    <img  class='resource-image' ng-src='{{link.image}}'/><br>
+                    <!--<iframe src="{{link.link}}"></iframe>-->
+                </div>
+            </div>
+
+            <!--ADD RESOURCE-->
+            <form id="addlink" ng-show="addresource" >
+
+                <h3>Add a resource for Web Developers</h3>
+
+                <div class="row">
+                    <div class="col-md-8" >
+                        Title: <input type="text" ng-model="link.title"><p></p>
+                        URL:   <input type="url" ng-model="link.link"><p></p>
+                        Description: <textarea rows="4" cols="75" ng-model="link.description"></textarea><p></p>
+                        Image:  <input name="image" ng-model="link.image"><p></p>
+                    </div>
+                    <div class="col-md-4" >
+                        Category: <br>
+                        <input type="checkbox" name="category" ng-model="link.category.html" value="html">html<br>
+                        <input type="checkbox" name="category" ng-model="link.category.css" value="css">css<br>
+                        <input type="checkbox" name="category" ng-model="link.category.javascript" value="javascript">javascript<br>
+                        <input type="checkbox" name="category" ng-model="link.category.jquery" value="jquery">jquery<br>
+                        <input type="checkbox" name="category" ng-model="link.category.angular" value="angular">angular.js<br>
+                        <input type="checkbox" name="category" ng-model="link.category.node" value="node">node.js<br>
+                        <input type="checkbox" name="category"  ng-model="link.category.ember" value="ember">ember.js<br>
+                        <input type="checkbox" name="category"  ng-model="link.category.mongul" value="mongul">mongul.js<br>
+                        <p></p>
+                        Type of Resource:<br>
+                        <input type="checkbox" name="resourcetype" ng-model="link.resourcetype.practice" value="practice" >practice exercises <br>
+                        <input type="checkbox" name="resourcetype" ng-model="link.resourcetype.video" value="video">video<br>
+                        <input type="checkbox" name="resourcetype" ng-model="link.resourcetype.pics" value="pictures and diagrams">pictures and diagrams<br>
+                        <input type="checkbox" name="resourcetype"  ng-model="link.resourcetype.tutorial" value="tutorial">tutorial<br>
+                        <input type="checkbox" name="resourcetype"  ng-model="link.resourcetype.tool" value="tool">tool to use for project<br>
+                        <p></p>
+                    </div>
+                </div>
+                <div class="row">
+
+                    <div class="buttonsforAddResource">
+                        <input type="submit" ng-click='addLink(); addresource=false' class="buttonkey btn btn-info btn-lg btn-blue btn-primary" value="Save Resource">
+                        <input type="reset" ng-click='addresource=false' class="buttonkey btn btn-info btn-lg btn-blue btn-warning" value="Cancel" >
+                    </div>
+                </div>
+
+
+
+            <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+            <!-- Include all compiled plugins (below), or include individual files as needed -->
+            <script src="js/bootstrap.min.js"></script>
+</body>
+</html>
