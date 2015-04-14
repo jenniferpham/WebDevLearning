@@ -2,18 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6dceca4e-7740-4017-99af-785479adff54" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/WebDevResources-Angular.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/form/addresource.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/form/reviewform.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/scopes/scope_settings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/form/searchresource.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="DELETED" beforePath="C:\Users\Jennifer\Documents\Coding\Github\WebDevResources-Angular\sodschedule.html" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.js" afterPath="$PROJECT_DIR$/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/form/addresource.html" afterPath="$PROJECT_DIR$/form/addresource.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/form/reviewform.html" afterPath="$PROJECT_DIR$/form/reviewform.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="WebDevResources-Angular.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -40,8 +31,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-2.3454545" vertical-offset="602" max-vertical-offset="3519">
-              <caret line="43" column="46" selection-start-line="43" selection-start-column="46" selection-end-line="43" selection-end-column="46" />
+            <state vertical-scroll-proportion="-1.6545454" vertical-offset="453" max-vertical-offset="3519">
+              <caret line="32" column="50" selection-start-line="32" selection-start-column="50" selection-end-line="32" selection-end-column="50" />
               <folding />
             </state>
           </provider>
@@ -50,8 +41,8 @@
       <file leaf-file-name="reviewform.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/form/reviewform.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-12.0" vertical-offset="368" max-vertical-offset="901">
-              <caret line="40" column="19" selection-start-line="40" selection-start-column="19" selection-end-line="40" selection-end-column="19" />
+            <state vertical-scroll-proportion="-7.1923075" vertical-offset="0" max-vertical-offset="901">
+              <caret line="11" column="14" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
               <folding />
             </state>
           </provider>
@@ -67,21 +58,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="addresource.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="addresource.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/form/addresource.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0" vertical-offset="578" max-vertical-offset="1241">
-              <caret line="34" column="66" selection-start-line="34" selection-start-column="66" selection-end-line="34" selection-end-column="66" />
+            <state vertical-scroll-proportion="0.8778135" vertical-offset="305" max-vertical-offset="1241">
+              <caret line="34" column="54" selection-start-line="34" selection-start-column="54" selection-end-line="34" selection-end-column="54" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="searchresource.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="searchresource.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/form/searchresource.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.35" vertical-offset="544" max-vertical-offset="1105">
-              <caret line="39" column="80" selection-start-line="39" selection-start-column="80" selection-end-line="39" selection-end-column="81" />
+            <state vertical-scroll-proportion="-28.115385" vertical-offset="0" max-vertical-offset="1105">
+              <caret line="43" column="31" selection-start-line="43" selection-start-column="31" selection-end-line="43" selection-end-column="31" />
               <folding />
             </state>
           </provider>
@@ -96,11 +87,11 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/form/addreview.html" />
-        <option value="$PROJECT_DIR$/form/addresource.html" />
-        <option value="$PROJECT_DIR$/form/reviewform.html" />
         <option value="$PROJECT_DIR$/app.js" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/form/searchresource.html" />
+        <option value="$PROJECT_DIR$/form/reviewform.html" />
+        <option value="$PROJECT_DIR$/form/addresource.html" />
       </list>
     </option>
   </component>
@@ -165,6 +156,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="form" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WebDevResources-Angular" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WebDevResources-Angular" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -258,7 +263,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -494,10 +499,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/form/reviewform.html">
+    <entry file="file://$PROJECT_DIR$/form/searchresource.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.0" vertical-offset="368" max-vertical-offset="901">
-          <caret line="40" column="19" selection-start-line="40" selection-start-column="19" selection-end-line="40" selection-end-column="19" />
+        <state vertical-scroll-proportion="-28.115385" vertical-offset="0" max-vertical-offset="1105">
+          <caret line="43" column="31" selection-start-line="43" selection-start-column="31" selection-end-line="43" selection-end-column="31" />
           <folding />
         </state>
       </provider>
@@ -510,26 +515,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/form/addresource.html">
+    <entry file="file://$PROJECT_DIR$/form/reviewform.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="578" max-vertical-offset="1241">
-          <caret line="34" column="66" selection-start-line="34" selection-start-column="66" selection-end-line="34" selection-end-column="66" />
+        <state vertical-scroll-proportion="-7.1923075" vertical-offset="0" max-vertical-offset="901">
+          <caret line="11" column="14" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.3454545" vertical-offset="602" max-vertical-offset="3519">
-          <caret line="43" column="46" selection-start-line="43" selection-start-column="46" selection-end-line="43" selection-end-column="46" />
+        <state vertical-scroll-proportion="-1.6545454" vertical-offset="453" max-vertical-offset="3519">
+          <caret line="32" column="50" selection-start-line="32" selection-start-column="50" selection-end-line="32" selection-end-column="50" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/form/searchresource.html">
+    <entry file="file://$PROJECT_DIR$/form/addresource.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.35" vertical-offset="544" max-vertical-offset="1105">
-          <caret line="39" column="80" selection-start-line="39" selection-start-column="80" selection-end-line="39" selection-end-column="81" />
+        <state vertical-scroll-proportion="0.8778135" vertical-offset="305" max-vertical-offset="1241">
+          <caret line="34" column="54" selection-start-line="34" selection-start-column="54" selection-end-line="34" selection-end-column="54" />
           <folding />
         </state>
       </provider>

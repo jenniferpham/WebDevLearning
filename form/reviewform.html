@@ -4,7 +4,7 @@
 
 
         <!--Display existing reviews-->
-        <h4>Reviews</h4>
+        <h4 ng-click="preview=!preview">Reviews</h4>
         <div ng-repeat="review in link.reviews" ng-show="preview">
             1Review Author: {{review.author}}<br>
             1Stars: {{review.stars}}<br>

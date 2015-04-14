@@ -23,20 +23,20 @@
 <!--Form to Add Resource that only shows when user clicks the "Add New Resource" button-->
 
 <form ng-show="addresource" class="modal fade" id="addresourceform" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
+    <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-header">
                 <h3 class="modal-title">Add a resource for Web Developers</h3>
             </div>
     <div class="modal-body">
         <div class="row">
-            <div class="col-md-8" >
-                Title: <br><input type="text" size="60" width="20" ng-model="link.title"><p></p>
+            <div class="col-md-8 col-xs-6" >
+                Title: <br><input type="text" size="60" width="1px" ng-model="link.title"><p></p>
                 URL:  <br> <input type="url" size="60" width="20" ng-model="link.link"><p></p>
                 Description:<br> <textarea rows="4" cols="50" ng-model="link.description"></textarea><p></p>
                 <p></p>
             </div>
-            <div class="col-md-4" >
+            <div class="col-md-4 col-xs-6" >
                 Category: <br>
                 <input type="checkbox" name="category" ng-model="link.category.html" value="html">html<br>
                 <input type="checkbox" name="category" ng-model="link.category.css" value="css">css<br>
