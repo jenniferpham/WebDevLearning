@@ -1,5 +1,5 @@
 (function(){
-var app= angular.module("devResources", ["firebase"]);
+var app = angular.module("devResources", ["firebase"]);
 
 
 app.filter('trustAsResourceUrl', ['$sce', function($sce) {
