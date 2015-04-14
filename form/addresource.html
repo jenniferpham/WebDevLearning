@@ -1,0 +1,68 @@
+<!--
+
+&lt;!&ndash; Modal &ndash;&gt;
+<div class="modal fade" id="addresourceform" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+            </div>
+            <div class="modal-body">
+                ...
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>-->
+
+
+<!--Form to Add Resource that only shows when user clicks the "Add New Resource" button-->
+
+<form ng-show="addresource" class="modal fade" id="addresourceform" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title">Add a resource for Web Developers</h3>
+            </div>
+    <div class="modal-body">
+        <div class="row">
+            <div class="col-md-8" >
+                Title: <br><input type="text" size="60" width="20" ng-model="link.title"><p></p>
+                URL:  <br> <input type="url" size="60" width="20" ng-model="link.link"><p></p>
+                Description:<br> <textarea rows="4" cols="50" ng-model="link.description"></textarea><p></p>
+                <p></p>
+            </div>
+            <div class="col-md-4" >
+                Category: <br>
+                <input type="checkbox" name="category" ng-model="link.category.html" value="html">html<br>
+                <input type="checkbox" name="category" ng-model="link.category.css" value="css">css<br>
+                <input type="checkbox" name="category" ng-model="link.category.javascript" value="javascript">javascript<br>
+                <input type="checkbox" name="category" ng-model="link.category.jquery" value="jquery">jquery<br>
+                <input type="checkbox" name="category" ng-model="link.category.angular" value="angular">angular.js<br>
+                <input type="checkbox" name="category" ng-model="link.category.node" value="node">node.js<br>
+                <input type="checkbox" name="category"  ng-model="link.category.ember" value="ember">ember.js<br>
+                <input type="checkbox" name="category"  ng-model="link.category.mongul" value="mongul">mongul.js<br>
+                <p></p>
+                Type of Resource:<br>
+                <input type="checkbox" name="resourcetype" ng-model="link.resourcetype.practice" value="practice" >practice exercises <br>
+                <input type="checkbox" name="resourcetype" ng-model="link.resourcetype.video" value="video">video<br>
+                <input type="checkbox" name="resourcetype" ng-model="link.resourcetype.pics" value="pictures and diagrams">pictures and diagrams<br>
+                <input type="checkbox" name="resourcetype"  ng-model="link.resourcetype.tutorial" value="tutorial">tutorial<br>
+                <input type="checkbox" name="resourcetype"  ng-model="link.resourcetype.tool" value="tool">tool to use for project<br>
+                <p></p>
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <div class="buttonsforAddResource">
+            <input type="submit" ng-click='addLink(); addresource=false' class="buttonkey btn btn-info btn-blue btn-primary" value="Save Resource">
+            <input type="reset" ng-click='addresource=false' class="buttonkey btn btn-info btn-blue btn-warning" value="Cancel" data-dismiss="modal">
+        </div>
+    </div>
+    </div>
+    </div>
+</form>

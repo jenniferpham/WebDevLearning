@@ -1,0 +1,47 @@
+<!-- Display Reviews -->
+<div class="row"  ng-controller="ReviewController" >
+    <div class="col-md-12">
+
+
+        <!--Display existing reviews-->
+        <h4>Reviews</h4>
+        <div ng-repeat="review in link.reviews" ng-show="preview">
+            1Review Author: {{review.author}}<br>
+            1Stars: {{review.stars}}<br>
+            1Description: {{review.description}}
+        </div>
+
+        <!--Add new reviews-->
+        <form name="reviewForm" ng-submit="addReview(link)" ng-show="preview" novalidate>
+            <h4>Add Your Own Review</h4>
+            <p></p>Preview: <br>
+            <!--display preview-->
+            <div class="review-block">
+                Stars: {{review.stars}}<br>
+                Comments: {{review.description}}<br>
+                <cite>by: {{review.author}}</cite>
+            </div>
+            <p></p>
+
+            <!--form for user to fill out-->
+            <label for = "review-stars">Review Stars</label>
+            <select id = "review-stars" ng-model="review.stars" required>
+                <option value="1" class="1s">1 star</option>
+                <option value="2" class="2s">2 stars</option>
+                <option value="3">3 stars</option>
+                <option value="4">4 stars</option>
+                <option value="5">5 stars</option>
+            </select>
+            <p></p>
+            <label for = "review-description">What did you think about this resource?</label><br>
+            <textarea id = "review-description" ng-model="review.description" rows="4" cols="75"></textarea>
+            <p></p>
+            <label for = "review-author">My name is:</label>
+            <input type="text" ng-model="review.author" value="authorname" id="review-author" required>
+            <div>review form is {{reviewForm.$valid}}</div>
+            <p></p>
+            <input type="submit" class="btn btn-info btn-sm btn-blue" value="submit"  />
+        </form>
+    </div>
+</div>
+<!--End review display-->

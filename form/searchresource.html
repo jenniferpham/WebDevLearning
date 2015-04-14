@@ -1,0 +1,59 @@
+<!--Search Form and filter by category and filter by resourcetype-->
+<form ng-show="searchresource" >
+
+    <!--Search Form - users can search existing database for resources using filters below-->
+    <h3>Search Resources for Web Developers</h3>
+    <p></p>
+
+    <!--Drop down list by category-->
+    <!--  searchCheckbox()<input type="checkbox" name="category" ng-model="angularCheck" ng-change="searchCheckbox()">angular.js<br>
+        minesearch <input type="checkbox" name="category" ng-model="search.category.angular || undefined" value="angular">angular.js -->
+    <!--   TESTING CATEGORY <select ng-model="search.category" ng-options="link.category for link in linkList"></select>
+   <br>
+   k as v for (k, v) in linkList
+       By Category:
+       <select name="searchbycategory" ng-model="search.category">
+           <option ng-model="search.category.html" value="html">html</option>
+           <option ng-model="search.category.css" value="css">css</option>
+           <option ng-model="search.category.javascript" value="javascript">javascript</option>
+           <option ng-model="search.category.jquery" value="jquery">jquery</option>
+           <option ng-model="search.category.angular" value="angular">angular.js</option>
+           <option ng-model="search.category.node" value="node">node.js</option>
+           <option ng-model="search.category.express" value="express">express.js</option>
+           <option ng-model="search.category.mongul" value="mongul">mongul.js</option>
+       </select>
+
+       &lt;!&ndash;Drop down list by resource type&ndash;&gt;
+       testing dropdown menu- category
+       <select ng-model="search.category" ng-options="category for category in link">
+       </select>
+       <p></p>
+
+       By Resource Type:
+       <select>
+           <option name="resourcetype" ng-model="search.resourcetype.practice" value="practice">practice</option>
+           <option name="resourcetype" ng-model="search.resourcetype.video" value="video">video</option>
+           <option name="resourcetype" ng-model="search.resourcetype.pics" value="pictures and diagrams">pictures and diagrams</option>
+           <option name="resourcetype" ng-model="search.resourcetype.tutorial" value="tutorial">tutorial</option>
+       </select>-->
+    <strong>Category:  </strong>
+    <input type="checkbox" name="category" ng-model="search.category.html" value="html" ng-true-value="1" ng-false-value="0">html
+    <input type="checkbox" name="category" ng-model="search.category.css" value="css">css
+    <input type="checkbox" name="category" ng-model="search.category.javascript" value="javascript">javascript
+    <input type="checkbox" name="category" ng-model="search.category.jquery" value="jquery">jquery
+    <input type="checkbox" name="category" ng-model="search.category.angular" value="angular">angular.js
+    <input type="checkbox" name="category" ng-model="search.category.node" value="node">node.js
+    <input type="checkbox" name="category"  ng-model="search.category.express" value="express">express.js
+    <input type="checkbox" name="category"  ng-model="search.category.mongo" value="mongo">mongoDB
+    <p></p>
+    <strong>Type of Resource:  </strong>
+    <input type="checkbox" name="resourcetype" ng-model="search.resourcetype.practice" value="practice" >practice exercises
+    <input type="checkbox" name="resourcetype" ng-model="search.resourcetype.video" value="video">video
+    <input type="checkbox" name="resourcetype" ng-model="search.resourcetype.pics" value="pictures and diagrams">pictures and diagrams
+    <input type="checkbox" name="resourcetype"  ng-model="search.resourcetype.tutorial" value="tutorial">tutorial
+    <input type="checkbox" name="resourcetype"  ng-model="search.resourcetype.tool" value="tool">tool to use for project
+    <!--Textbox to search all fields-->
+    <p></p>
+    <strong> Search:</strong> <input type="text" ng-model='search.$'><p></p>
+
+</form>

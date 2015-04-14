@@ -1,4 +1,4 @@
-
+(function(){
 var app= angular.module("devResources", ["firebase"]);
 
 
@@ -14,34 +14,15 @@ app.controller('MainController', ["$scope", "$firebase",  function($scope, $fire
     var sync = $firebase(ref);
     // download the data into a local object
     $scope.linkList = sync.$asArray();
-    //
-    //if($scope.search != null) {
-    //    alert(">>>>>>>>>>>" + $scope.search);
-    //}
-    //The firebase is synced to my locally created linkList
 
-
-   /* $scope.whiteList = function ($sceDelegateProvider) {
-        //  console.log(">>>>>>>>>>>>>>>>",$rootScope.linkList);
-        $sceDelegateProvider.resourceUrlWhitelist([
-            // Allow same origin resource loads.
-            'self',
-            // Allow loading from our assets domain.  Notice the difference between * and **.
-            'http://css-tricks.com/examples/hrs/'
-        ]);
-    };*/
-     /*  $scope.addReview= function(link){
-     var refLink = new Firebase("https://web-dev-resources.firebaseio.com/" + link.uid);  //targets link within linkList array
-     var sync2 = $firebase(refLink);
-     sync2.$update({ review: { stars: "", description: "", author: "" }});
-     }*/
+    $scope.master = {};
      //Function for adding link to my firebase database
      $scope.addLink = function () {
 
-     //$add syntax is unique to angularfirebase
-     $scope.linkList.$add($scope.link); //add $scope.link (accessible on view) to the linkList array
-     alert("Thanks for adding a helpful resource and contributing to the learning of web developers worldwide.");
-     $scope.link = {};
+         //$add syntax is unique to angularfirebase
+         $scope.linkList.$add($scope.link); //add $scope.link (accessible on view) to the linkList array
+         alert("Thanks for adding a helpful resource and contributing to the learning of web developers worldwide.");
+         $scope.link = {};
      };
 
 
@@ -66,6 +47,7 @@ app.controller('MainController', ["$scope", "$firebase",  function($scope, $fire
         //Simply update the list with the passed link
         $scope.linkList.$save(item);
         alert("You have successfully updated this resource.")
+
     };
 
     //TRYING TO GET ALL PROPERTIES WITHIN  OBJECT WITHIN LINK OBJECT WITHIN LINKLIST ARRAY
@@ -78,41 +60,40 @@ app.controller('MainController', ["$scope", "$firebase",  function($scope, $fire
       }, tempTrue);
      return tempTrue;
   };
+  $scope.saveOriginal = function (currentInfo){  //copy current info into this $scope variable to use later. place this function on the edit button so it will immediately save all the items before allowing user to edit hte form
+    $scope.origLink = angular.copy(currentInfo.link);  //must put $scope in front of it so that reset fcn can access it
+    $scope.origTitle = angular.copy(currentInfo.title);
+    $scope.origDescription = angular.copy(currentInfo.description);
+    $scope.origCategory = angular.copy(currentInfo.category);
+    $scope.origResourcetype = angular.copy(currentInfo.resourcetype);
+  };
 
-     //
-     //var trueProperties = [];   //create array
-     //for (var prop in linkObj){
-     //
-     //    console.log(">>>", prop);
-     ////if (linkObj[prop]==true){
-     ////
-     //var trueProperty = prop;
-     //trueProperties.push(trueProperty);
-     ////}
-
-
-  //   alert(trueProperties);
-  //   $('#true-category').html("True categories are: " + trueProperties);  //when keys values are true, then display key in #true-category
-  //};
-
-
-    $scope.reset = function () {
-        //angular.copy(currentInfo, newInfo );
+    $scope.reset = function(link) {
+        link.link = angular.copy($scope.origLink);  //sets the properties of the formfields back to original info
+        link.title = angular.copy($scope.origTitle);
+        link.description = angular.copy($scope.origDescription);
+        link.category = angular.copy($scope.origCategory);
+        link.resourcetype = angular.copy($scope.origResourcetype);
     };
 
+
 }]);
-        //$scope.reset();
 
-      /*  $scope.oldLinkClone = function (results){
-            // $scope.oldLink={};
-            // angular.copy($scope.link, [$scope.oldLink]);
-            // alert("oldLink is "+ $scope.oldLink);
+//
+//var trueProperties = [];   //create array
+//for (var prop in linkObj){
+//
+//    console.log(">>>", prop);
+////if (linkObj[prop]==true){
+////
+//var trueProperty = prop;
+//trueProperties.push(trueProperty);
+////}
 
-              $scope.myModel = results;
-                var backup = results;
-                alert(backup);
-        }*/
 
+//   alert(trueProperties);
+//   $('#true-category').html("True categories are: " + trueProperties);  //when keys values are true, then display key in #true-category
+//};
  //create review object
 
    // $scope.reviewList = sync.$asArray();
@@ -158,19 +139,6 @@ app.controller('MainController', ["$scope", "$firebase",  function($scope, $fire
 
 
 
- /*    $scope.cancelChanges = function (original) {
-
-            $scope.original = $scope.link;  //getting current value of $scope.link and calling it $scope.original
-            // $scope.link=original;
-            alert("original is" + original);
-// save original in a temp object
-// save newchanges intoatep object
-// deleting new changes from linkList
-            $scope.link.$set($scope.original);
-
-
-
-        };*/
 
         // filter functions
 
@@ -192,10 +160,20 @@ app.controller('MainController', ["$scope", "$firebase",  function($scope, $fire
         }*/
 
 //
-//app.controller("ReviewController",[] function($scope){
-//
-//});
+    app.controller("ReviewController", function($scope){
+        $scope.review={};
 
+        $scope.addReview = function(link){
+            $scope.review = {stars: $scope.review.stars, author: $scope.review.author, description: $scope.review.description};
+            link.reviews=[];
+            alert("reviews: " + link.reviews)
+            link.reviews.push($scope.review);
+            $scope.review={};
+        };
+
+
+    });
+})();
 
 
 
